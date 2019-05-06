@@ -12,7 +12,7 @@ int main(){
                 puts("Fila criada com sucesso");    
                 break;
             case 2:
-                printf("Digite o valor que deseja inserir");
+                printf("Digite o valor que deseja inserir\n");
                 scanf("%d", &valor);
                 inserir(f, valor);
                 break;
