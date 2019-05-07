@@ -12,6 +12,6 @@ int vazia(Lista *l);
 
 int cheia(Lista *l);
 
-void imptimir(Lista *l, int pos);
+void imprimir(Lista *l, int pos);
 
 void liberar(Lista *l);
