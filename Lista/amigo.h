@@ -1,11 +1,16 @@
-typedef struct lista Lista;
-typedef struct amigo Amigo;
-
-struct amigo{
+#define TAM 10  
+struct lista{
+     Amigo amigos[TAM];
+     int qtd_ele;
+ };
+ struct amigo{
     char nome;
     int idade;
     char endereco;
 };
+typedef struct lista Lista;
+typedef struct amigo Amigo;
+
 
 Lista* criar();
 

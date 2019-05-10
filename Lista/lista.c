@@ -11,6 +11,7 @@ struct lista{
 Lista* criar(){
     Lista *l = (Lista*) malloc(sizeof(Lista));
     l->qtd_ele = 0;
+	return l;
 }
 
 int cheia(Lista *l){
@@ -60,13 +61,13 @@ int remover(Lista *l, int pos){
     int valor;
     if(vazia(l)) printf("A lista está vazia não é possível remover");
     else{
-        if(pos >=l->qtd_elem || pos<0) printf("Posição inválida");
+        if(pos >=l->qtd_ele || pos<0) printf("Posição inválida");
         else{
             valor = l->v[pos];
             
-            for(int i=pos+1;i<l->qtd_elem;i++)
+            for(int i=pos+1;i<l->qtd_ele;i++)
                 l->v[i-1] = l-> v[i];
-            l->qtd_elem--;
+            l->qtd_ele--;
             return(valor);
         }
         
@@ -74,7 +75,7 @@ int remover(Lista *l, int pos){
 }
 
 void imprimir(Lista *l, int pos){
-    if(pos>=0 && pos<l->qtd_elem)
+    if(pos>=0 && pos<l->qtd_ele)
         printf("O elemento %d da lista é %d", pos, l->v[pos]);
     else printf("Posição inválida");
 }
