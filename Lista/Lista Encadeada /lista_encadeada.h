@@ -1,13 +1,15 @@
-typedef struct{
+typedef struct no No;
+typedef struct lista_encadeada Lista; 
+ struct no{
     int valor;
     No *prox;
     No *ant;
-}No;
+};
 
-typedef struct{
+struct lista_encadeada{
     No *ini;
     No *fim;
-}Lista;
+};
 
 
 Lista* criar();
