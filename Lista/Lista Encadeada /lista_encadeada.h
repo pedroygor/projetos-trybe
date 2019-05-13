@@ -1,10 +1,10 @@
-typedef struct no{
+typedef struct{
     int valor;
     No *prox;
     No *ant;
 }No;
 
-typedef struct lista_encadeada{
+typedef struct{
     No *ini;
     No *fim;
 }Lista;
