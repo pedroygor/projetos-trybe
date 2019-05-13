@@ -6,3 +6,9 @@ Lista* criar(){
     l->qtd_ele = 0;
     return l;
 }
+// Imprimir Endereco, nome e idade
+
+Amigo* remover(Lista *l){
+    int i = 0;
+    Amigo valor;
+}

@@ -14,7 +14,7 @@ typedef struct amigo Amigo;
 
 Lista* criar();
 
-void inserir(Lista *l, Amigo *am);
+void inserir(Lista *l, Amigo *am, int pos);
 
 Amigo* remover(Lista *l);
 
