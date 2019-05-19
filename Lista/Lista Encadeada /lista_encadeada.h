@@ -14,6 +14,8 @@ struct lista_encadeada{
 
 Lista* criar();
 
+No* consulta(Lista *l, int pos);
+
 void inserir(Lista *l, int valor, int pos);
 
 int remover(Lista *l, int pos);
