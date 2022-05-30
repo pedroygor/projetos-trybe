@@ -6,8 +6,9 @@
 }
 body {
   font-family: 'Press Start 2P', cursive;
-  background-image: url(966314.jpg);
+  background-image: url(imgs/966314.jpg);
   background-size: cover;
+  height: 100vh;
 }
 #title,
 #color-palette,
