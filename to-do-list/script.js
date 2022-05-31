@@ -58,7 +58,16 @@ function taskCompleted() {
   }
 }
 
-const createToDo = function createContentList() {
+function getItemListLocalStorage() {
+  if (localStorage.length !== 0) {
+    ol.innerHTML += localStorage.getItem('task');
+    paintLi();
+    taskCompleted();
+  }
+}
+window.onload = getItemListLocalStorage;
+
+const createToDo = () => {
   const text = inputValue.value.trim();
   if (!text) {
     alert('tarefa inválida');
@@ -71,17 +80,6 @@ const createToDo = function createContentList() {
   paintLi();
   taskCompleted();
 };
-// function getItemListLocalStorage() {
-//   if (localStorage.getItem !== null) {
-//     const arrayOfItems = localStorage.getItem('task').split(' ');
-//     for (let i = 0; i < arrayOfItems.length - 1; i += 1) {
-//       const li = createLi();
-//       li.innerText = arrayOfItems[i];
-//       ol.appendChild(li);
-//     }
-//   }
-// }
-// getItemListLocalStorage();
 
 function createButtonClearAll() {
   const button = document.createElement('button');
@@ -174,11 +172,7 @@ const removeSelected = () => {
 };
 
 const saveTask = () => {
-  let contentTask = '';
-  for (let i = 0; i < itemList.length; i += 1) {
-    contentTask += `${itemList[i].textContent} `;
-  }
-  localStorage.setItem('task', contentTask);
+  localStorage.setItem('task', ol.innerHTML);
 };
 
 const btnDown = document.getElementById('mover-baixo');
