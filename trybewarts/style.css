@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Serif', serif;
+}
+input, button {
+  border: none;
+}
+
+main {
+  display: flex;
+}
+
+img {
+  height: 50px;
+  padding: 5px;
+}
+
+textarea {
+  z-index: 0;
+  width: 100%;
+}
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
+  height: 675px;
+  flex-direction: column;
+  padding: 30px;
+  gap: 5px;
+}
+
+#trybewarts-forms-logo {
+  height: 100vh;
+  width: 40%;
+}
+
+.header {
+  display: flex;
+  background-color: rgb(50, 167, 145);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.trybewarts-login {
+  display: flex;
+  margin-right: 5px;
+  align-items: center;
+}
+
+#email , #password {
+  margin-right: 5px;
+  width: 8rem;
+  height: 50%;
+}
+
+#email::placeholder , #password::placeholder {
+  padding-left: 5px;
+  font-size: 0.8rem;
+}
+
+#btn-login {
+  font-size: 12px;
+  background-color: #fff;
+  padding: 0 10px;
+}
+
+#sec-btn-radio {
+  display: flex;
+  flex-direction: column;
+}
+
+#counter {
+  position: absolute;
+  z-index: 1;
+  top: 85%;
+  right: 5%;
+}
+
+#div-counter {
+  position: relative;
+  width: 50%;
+}
+
+#form-data {
+  display: none;
+  width: 675px;
+  height: 675px;
+}
