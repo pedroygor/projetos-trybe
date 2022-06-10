@@ -31,8 +31,9 @@ textarea {
 input:focus,
 #house:focus,
 #textarea {
-  outline: 2px solid rgb(50, 167, 145);
-  border: none;
+  outline: none;
+  border: 1px solid rgb(50, 167, 145);
+  border-radius: 5px;
 }
 
 #evaluation-form {
@@ -94,6 +95,7 @@ input::placeholder,
 
 #textarea {
   margin-top: 5px;
+  padding-left: 5px;
 }
 
 @media screen and (max-width: 400px) {
