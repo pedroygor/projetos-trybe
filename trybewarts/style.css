@@ -98,6 +98,17 @@ input::placeholder,
   padding-left: 5px;
 }
 
+#form-data {
+  width: 100%;
+  /* text-align: center; */
+  margin-left: 10px;
+  line-height: 2rem;
+  letter-spacing: .15rem;
+}
+#form-data p{
+  text-align: justify;
+}
+
 @media screen and (max-width: 400px) {
   .header {
     width: 100vw;

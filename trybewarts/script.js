@@ -6,7 +6,7 @@ const btnSubmit = document.getElementById('submit-btn');
 const counterArea = document.getElementById('textarea');
 const counterElement = document.getElementById('counter');
 const info = document.getElementById('form-data');
-const form = document.getElementById('evaluation-form');
+const form = document.querySelector('.form-container');
 
 function displayBtn() {
   if (btnAgree.checked === true) {
@@ -103,6 +103,7 @@ const showInfo = (e) => {
   e.preventDefault();
   form.style.display = 'none';
   info.style.display = 'block';
+  window.scrollTo(0,0);
   showFullName();
   showEmail();
   showHouse();
