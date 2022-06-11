@@ -30,6 +30,8 @@ body {
   width: 100vw;
 }
 #title {
+  font-size: 3rem;
+  font-weight: 400;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
 }
