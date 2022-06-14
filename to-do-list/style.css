@@ -6,28 +6,43 @@
 
 body {
   font-family: 'Courier New', Courier, monospace;
-  background-color: #2cd72c;
-}
-header {
-  margin-top: 30px;
-  margin-left: 20px;
+  background-color: #eee;
 }
 
 button {
-  padding: 5px 15px;
-  border-radius: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 5px 10px;
+  border-radius: 5px;
   border: none;
   height: 25px;
-  color: #fff;
-  margin-left: 10px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-input {
-  height: 25px;
-  border-radius: 5px;
-  border: 1px solid blue;
-  padding-left: 3px;
-  
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 800px) 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  height: 100vh;
+  width: 100vw;
+}
+.header {
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+
+.header, .footer {
+  background-color: #2c8ad7;
+  color: #eee;
+  padding: 10px 0 10px 20px;
+  margin-top: 20px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 #funcionamento {
@@ -35,36 +50,56 @@ input {
 }
 
 .to-do-container {
-  background-color: white;
-  width: 70%;
-  border-radius: 10px;
-  margin: 20px 0 0 10px;
+  grid-column: 1/3;
+  grid-row: 2/5;
+  background-color: #2c8ad7;
+  min-height: 100px;
   padding: 10px;
+  margin-top: 20px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
+
+#texto-tarefa {
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  padding-left: 3px;
+  outline: none;
+}
+
 #criar-tarefa {
-  background-color: #0000ff;
+  background-color: #eee;
+  color: #2c8ad7;
 } 
 
 #apaga-tudo {
-  background-color: #ff0000;
+  background-color: #d11e1e;
+  color: #eee;
 }
 
 #remover-finalizados {
-  background-color: #ff15d0;
+  background-color: #c52ca6;
+  color: #eee;
 }
 
 #mover-cima, #mover-baixo {
-  background-color: indigo;
-}
-#mover-baixo {
-  margin-left: 0;
+  background-color: #7222ac;
+  color: #eee;
 }
 
 #remover-selecionado {
-  background-color: #ff8000;
+  background-color: #bd8c24;
+  color: #eee;
 }
 #salvar-tarefas {
-  background-color: #342244;
+  background-color: #1eb443;
+  color: #eee;
 }
 
 #lista-tarefas {
@@ -77,5 +112,25 @@ input {
 }
 
 .selected {
-  background-color: gray;
+  background-color: #eee;
+}
+
+.footer {
+  grid-row: 5 / 6;
+  grid-column: 1/4;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn-container {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+  justify-content: center;
 }

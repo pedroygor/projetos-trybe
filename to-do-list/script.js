@@ -22,9 +22,9 @@ function insertOrdenedList() {
   toDoContainer.appendChild(ol);
 }
 
-insertInput();
-insertButton();
-insertOrdenedList();
+// insertInput();
+// insertButton();
+// insertOrdenedList();
 
 const btnToDo = document.getElementById('criar-tarefa');
 const inputValue = document.getElementById('texto-tarefa');
@@ -48,13 +48,13 @@ function paintLi() {
   }
 }
 
-const teste = (e) => {
+const toggleCompleted = (e) => {
   e.target.classList.toggle('completed');
 };
 
 function taskCompleted() {
   for (let i = 0; i < itemList.length; i += 1) {
-    itemList[i].addEventListener('dblclick', teste);
+    itemList[i].addEventListener('dblclick', toggleCompleted);
   }
 }
 
@@ -121,12 +121,12 @@ function createButtonSaveTask() {
   toDoContainer.appendChild(button);
 }
 
-createButtonDownItem();
-createButtonUpItem();
-createButtonRemoveSelected();
-createButtonClearCompleted();
-createButtonClearAll();
-createButtonSaveTask();
+// createButtonDownItem();
+// createButtonUpItem();
+// createButtonRemoveSelected();
+// createButtonClearCompleted();
+// createButtonClearAll();
+// createButtonSaveTask();
 const btnClearAll = document.getElementById('apaga-tudo');
 const btnClearCompleted = document.getElementById('remover-finalizados');
 
