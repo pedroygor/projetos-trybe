@@ -5,34 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
+    <script src="https://kit.fontawesome.com/31126d331f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="grid-container">
       <header class="header">
         <h1>Minha Lista de Tarefas</h1>
-        <p id="funcionamento">
+        <p id="descricao">
           Clique duas vezes em um item para marcá-lo como completo
         </p>
       </header>
       <section class="to-do-container">
         <div class="input-container">
-          <input  id="texto-tarefa" type="text" name="text">
+          <input id="texto-tarefa" type="text" name="text" />
           <button id="criar-tarefa" type="submit">Criar tarefa</button>
         </div>
-        <ol id="lista-tarefas"></ol>
+        <div class="list-container">
+          <div class="btn-up-down">
+            <button id="mover-cima" class="fa-solid fa-arrow-up"></button>
+            <button id="mover-baixo" class="fa-solid fa-arrow-down"></button>
+          </div>
+          <ol id="lista-tarefas"></ol>
+        </div>
         <div class="btn-container">
           <button id="apaga-tudo">Limpar Lista</button>
           <button id="remover-finalizados">Limpar Completos</button>
-          <button id="mover-cima">Mover Cima</button>
-          <button id="mover-baixo">Mover Baixo</button>
           <button id="remover-selecionado">Remover Selecionado</button>
           <button id="salvar-tarefas">Salvar Tarefas</button>
         </div>
       </section>
-      <footer class="footer"><a href="http://" target="_blank" rel="noopener noreferrer">Pedro Ygor</a> - Trybe - 2022</footer>
+      <footer class="footer">
+        <span><a href="https://www.linkedin.com/in/pedro-ygor/" target="_blank" rel="noopener noreferrer">Pedro Ygor</a
+          > - Trybe - 2022</span>
+      </footer>
     </div>
-    
-   <script src="script.js"></script>
+
+    <script src="script.js"></script>
   </body>
 </html>
