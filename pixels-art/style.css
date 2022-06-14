@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 input {
   outline: none;
 }
@@ -12,23 +13,11 @@ body {
   color: #f1f1f179;
   font-family: 'Press Start 2P', cursive;
   background-image: url(imgs/966314.jpg);
-  /* background: #0f0c29; /* fallback for old browsers */
-  /* background: -webkit-linear-gradient(
-    to right,
-    #24243e,
-    #302b63,
-    #0f0c29
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  /* background: linear-gradient(
-    to right,
-    #24243e,
-    #302b63,
-    #0f0c29
-  ); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   height: 100vh;
   width: 100vw;
 }
+
 #title {
   font-size: 3rem;
   font-weight: 400;
@@ -40,6 +29,7 @@ body {
   text-align: center;
   margin-top: 10px;
 }
+
 .color {
   margin-left: 5px;
   display: inline-block;
@@ -48,6 +38,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 50%;
 }
+
 .button {
   position: fixed;
   bottom: 5px;
@@ -57,24 +48,29 @@ body {
   flex-wrap: wrap;
   gap: 5px;
 }
+
 #board-size {
   padding: 8px;
   font-family: 'Press Start 2P', cursive;
   border: none;
 }
+
 #generate-board {
   border: none;
   color: springgreen;
   padding: 8px 8px;
   font-family: 'Press Start 2P', cursive;
 }
+
 #pixel-board {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   width: 150px;
   margin: 0 auto;
   margin-top: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
+
 .pixel {
   display: flex;
   background-color: white;
@@ -82,6 +78,7 @@ body {
   height: 30px;
   border: 1px solid black;
 }
+
 #clear-board {
   padding: 8px 8px;
   border: none;
