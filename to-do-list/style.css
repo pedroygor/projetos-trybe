@@ -178,6 +178,13 @@ a:hover {
   align-items: center;
 }
 
-button:hover {
+#mover-cima:hover, #mover-baixo:hover {
   opacity: 0.8;
+}
+
+#apaga-tudo:hover, 
+#remover-finalizados:hover, 
+#remover-selecionado:hover,
+#salvar-tarefas:hover {
+  border: 1px solid #eee;
 }
