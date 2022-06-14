@@ -14,8 +14,6 @@ body {
   font-family: 'Press Start 2P', cursive;
   background-image: url(imgs/arcade-game-world-pixel-scene/45884.jpg);
   background-size: cover;
-  height: 100vh;
-  width: 100vw;
 }
 
 #title {
