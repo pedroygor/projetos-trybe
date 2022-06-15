@@ -16,8 +16,6 @@ body {
 
 button {
   font-family: 'Courier New', Courier, monospace;
-  padding: 5px 10px;
-  /* border-radius: 5px; */
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -44,7 +42,6 @@ a {
   background-color: var(--bg-color);
   color: var(--color-primary);
   padding: 10px 0 10px 20px;
-  /* margin-top: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,29 +57,47 @@ a {
   grid-row: 2/5;
   background-color: var(--bg-color);
   min-height: 100px;
+  width: 100%;
   padding: 10px;
   margin-top: 40px;
   margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.input-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
 }
 
 .list-container {
   color: var(--color-primary);
   display: flex;
-  align-self: flex-start;
-  width: 100%;
+  justify-content: center;
+  align-self: center;
+  width: 15%;
   font-size: 1.2rem;
+}
+
+.input-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  width: 55%;
+  flex-direction: column;
+  margin-right: 5px;
+}
+
+.btn-container {
+  width: 25%;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+}
+
+.input-content {
+  display: flex;
+  gap: 5px;
+  width: 100%;
 }
 
 .btn-up-down {
@@ -93,15 +108,17 @@ a {
   justify-content: center;
   width: 30%;
 }
+
 #lista-tarefas {
-  width: 70%;
   margin-left: 5rem;
+  font-size: 1.5rem;
+  color: var(--color-primary);
 }
+
 #texto-tarefa {
   font-family: 'Courier New', Courier, monospace;
-  width: 30rem;
+  width: 80%;
   padding: 10px;
-  /* border-radius: 5px; */
   border: none;
   padding-left: 3px;
   outline: none;
@@ -111,14 +128,17 @@ a {
 #criar-tarefa {
   background-color: var(--color-primary);
   color: var(--color-btn);
-  padding: 10px 20px;
+  width: 20%;
+  padding: 10px;
 } 
 
 #apaga-tudo, 
 #remover-finalizados, 
 #remover-selecionado,
 #salvar-tarefas  {
-  padding: 10px 20px;
+  font-size: 1.2rem;
+  padding: .5rem;
+  flex-grow: 1;
 }
 
 #apaga-tudo {
@@ -133,8 +153,8 @@ a {
 
 #mover-cima, #mover-baixo {
   background-color: var(--color-primary);
-  color: #2c8ad7;
-  padding: 10px 20px;
+  color: var(--color-btn);
+  padding: .5rem .8rem;
 }
 
 #remover-selecionado {
@@ -158,8 +178,6 @@ a {
 .footer {
   grid-row: 5 / 6;
   grid-column: 1/4;
-  /* border-top-right-radius: 5px;
-  border-top-left-radius: 5px; */
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -175,14 +193,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.btn-container {
-  height: 40px;
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
+
 
 #mover-cima:hover, #mover-baixo:hover {
   opacity: 0.8;
