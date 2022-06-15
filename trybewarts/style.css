@@ -9,6 +9,9 @@
 html {
   font-family: 'IBM Plex Serif', serif;
 }
+body {
+  height: 100vh;
+}
 /* input, button {
   border: none;
 } */
@@ -404,7 +407,7 @@ input::placeholder,
     width: 40%;
   }
   #trybewarts-forms-logo {
-    height: 50%;
+    height: 90%;
     margin-top: 5px;
     width: 80%;
   }
@@ -446,6 +449,8 @@ input::placeholder,
     background-color: rgb(50, 167, 145);
     color: #fff;
     padding: 1rem;
+    position: absolute;
+    bottom: 0;
   }
   #submit-btn {
     background-color: rgb(50, 62, 167);
