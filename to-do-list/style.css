@@ -11,6 +11,7 @@ body {
   font-family: 'Courier New', Courier, monospace;
   background-image: url(imgs/bg-2.svg);
   background-size: cover;
+  height: 100vh;
 }
 
 button {
@@ -29,9 +30,9 @@ a {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr minmax(300px, 800px) 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  height: 100vh;
+  grid-template-columns: minmax(100px, 1fr) minmax(300px, 1200px) minmax(100px, 1fr);
+  grid-template-rows: 1fr 25% 25% 25% 1fr;
+  height: 100%;
   width: 100vw;
 }
 .header {
@@ -43,7 +44,7 @@ a {
   background-color: var(--bg-color);
   color: var(--color-primary);
   padding: 10px 0 10px 20px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
