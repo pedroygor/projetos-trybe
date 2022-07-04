@@ -4,8 +4,8 @@ const { species } = data;
 function countAnimals(animal) {
   if (!animal) {
     const result = {};
-    species.forEach((specie) => {
-      result[specie.name] = specie.residents.length;
+    species.forEach(({ name, residents }) => {
+      result[name] = residents.length;
     });
     return result;
   }

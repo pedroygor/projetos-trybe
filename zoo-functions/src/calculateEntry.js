@@ -13,10 +13,9 @@ function countEntrants(entrants) {
 
 function calculateEntry(entrants) {
   if (!entrants || Object.keys(entrants).length === 0) return 0;
-  const obj = countEntrants(entrants);
-  let result = 0;
-  result = (obj.child * prices.child) + (obj.adult * prices.adult)
-  + (obj.senior * prices.senior);
+  const objEntrant = countEntrants(entrants);
+  const result = (objEntrant.child * prices.child) + (objEntrant.adult * prices.adult)
+  + (objEntrant.senior * prices.senior);
   return result;
 }
 

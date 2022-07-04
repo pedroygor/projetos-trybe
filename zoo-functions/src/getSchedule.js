@@ -11,8 +11,7 @@ function getWeek(scheduleTarget) {
   if (hora.open === 0 && hora.close === 0) {
     return { [scheduleTarget]: { officeHour: 'CLOSED', exhibition: 'The zoo will be closed!' } };
   }
-  let exi = [];
-  exi = species.reduce((acc, current) => {
+  const exi = species.reduce((acc, current) => {
     if (current.availability.includes(scheduleTarget)) {
       acc.push(current.name);
     }
@@ -23,12 +22,12 @@ function getWeek(scheduleTarget) {
 }
 
 function getEmptyWeek() {
-  const obj = {};
+  const week = {};
   Object.keys(hours).forEach((dia) => {
     if (dia === 'Monday') {
-      obj[dia] = { officeHour: 'CLOSED', exhibition: 'The zoo will be closed!' };
+      week[dia] = { officeHour: 'CLOSED', exhibition: 'The zoo will be closed!' };
     } else {
-      obj[dia] = {
+      week[dia] = {
         officeHour: `Open from ${hours[dia].open}am until ${hours[dia].close}pm`,
         exhibition: species.reduce((acc, current) => {
           if (current.availability.includes(dia)) {
@@ -39,7 +38,7 @@ function getEmptyWeek() {
       };
     }
   });
-  return obj;
+  return week;
 }
 
 function getSchedule(scheduleTarget) {

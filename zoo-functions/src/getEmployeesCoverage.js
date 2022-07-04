@@ -2,25 +2,26 @@ const data = require('../data/zoo_data');
 
 const { employees, species } = data;
 
-function getFirstName(obj) {
+function getInformationByEmployee(obj) {
   return employees
-    .find((employee) => (employee.firstName === obj.name
-    || employee.lastName === obj.name || employee.id === obj.id));
+    .find(({ id, firstName, lastName }) => (firstName === obj.name
+    || lastName === obj.name || id === obj.id));
 }
 
 function showObject(obj) {
-  const teste = getFirstName(obj);
+  const information = getInformationByEmployee(obj);
+  const { id, firstName, lastName } = information;
   return {
-    id: teste.id,
-    fullName: `${teste.firstName} ${teste.lastName}`,
+    id,
+    fullName: `${firstName} ${lastName}`,
     species: species.reduce((acc, current) => {
-      if (teste.responsibleFor.includes(current.id)) {
+      if (information.responsibleFor.includes(current.id)) {
         acc.push(current.name);
       }
       return acc;
     }, []),
     locations: species.reduce((acc, current) => {
-      if (teste.responsibleFor.includes(current.id)) {
+      if (information.responsibleFor.includes(current.id)) {
         acc.push(current.location);
       }
       return acc;
@@ -36,7 +37,7 @@ function getEmployeesCoverage(obj) {
     return showAllEmployees();
   }
   if (Object.keys(obj).length > 0) {
-    const objeto = getFirstName(obj);
+    const objeto = getInformationByEmployee(obj);
     if (!objeto) {
       throw new Error('Informações inválidas');
     }

@@ -8,10 +8,10 @@ function getPerson(id) {
 
 function getOldestFromFirstSpecies(id) {
   const animal = getPerson(id);
-  const obj = species
+  const oldestAnimal = species
     .find((item) => animal === item.id).residents
     .reduce((acc, current) => (current.age > acc.age ? current : acc));
-  return [obj.name, obj.sex, obj.age];
+  return [oldestAnimal.name, oldestAnimal.sex, oldestAnimal.age];
 }
 
 module.exports = getOldestFromFirstSpecies;
