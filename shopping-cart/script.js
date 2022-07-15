@@ -67,7 +67,7 @@ const createCartItemElement = ({ sku, name, salePrice, image }) => {
   const icon = createIconSpan();
 
   li.className = 'cart__item';
-  span.innerText = `SKU: ${sku} | NAME: ${name} | PRICE: $${salePrice}`;
+  span.innerText = `${name} | PRICE: $${salePrice}`;
   li.appendChild(icon);
   li.appendChild(img);
   li.appendChild(span);
