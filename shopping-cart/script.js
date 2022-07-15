@@ -3,6 +3,8 @@ const cardItems = document.getElementsByClassName('cart__items')[0];
 const totalPrice = document.getElementsByClassName('total-price')[0];
 const emptyCart = document.getElementsByClassName('empty-cart')[0];
 const cartIcon = document.getElementsByClassName('material-icons')[0];
+const searchInput = document.getElementsByClassName('search-txt')[0];
+const btnSearch = document.getElementsByClassName('fa-search')[0];
 
 cartIcon.addEventListener('click', () => {
   document.getElementsByClassName('container-cartTitle')[0].classList.toggle('invisible-cart');
@@ -82,10 +84,10 @@ const createLiReload = () => {
   return li;
 };
 
-const showProduct = async () => {
+const showProduct = async (product) => {
   const ele = createLiReload();
   cardItems.appendChild(ele);
-  const data = await fetchProducts('computador');
+  const data = await fetchProducts(product);
   const { results } = await data;
   ele.remove();
   results.forEach(({ id, title, thumbnail, price }) => {
@@ -123,8 +125,15 @@ emptyCart.addEventListener('click', () => {
   showPrice();
 });
 
+btnSearch.addEventListener('click', async () => {
+  items.innerHTML = '';
+  const product = searchInput.value.trim();
+  await showProduct(product);
+  searchInput.value = '';
+});
+
 window.onload = async () => { 
-  await showProduct();
+  await showProduct('computador');
   await addShoppingCart();
   await cartItemClickListener();
   getCartItems();

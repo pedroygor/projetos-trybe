@@ -26,6 +26,11 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,100,0,-25"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+
     <script src="./helpers/fetchItem.js" defer></script>
     <script src="./helpers/fetchProducts.js" defer></script>
     <script src="./helpers/saveCartItems.js" defer></script>
@@ -36,6 +41,12 @@
     <header class="header">
       <div class="container-title">
         <span class="title"><strong>trybe</strong>shopping</span>
+        <div class="search-box">
+          <input class="search-txt" type="text" placeholder="Pesquisar" />
+          <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+          </a>
+        </div>
       </div>
       <i class="material-icons" style="font-size: 45px; color: white"
         >shopping_cart</i
