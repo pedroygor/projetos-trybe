@@ -114,3 +114,4 @@ const showInfo = (e) => {
 };
 
 btnSubmit.addEventListener('click', showInfo);
+
