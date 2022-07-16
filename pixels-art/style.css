@@ -10,10 +10,10 @@ input {
 }
 
 body {
+  height: 100vh;
   color: #f1f1f179;
   font-family: 'Press Start 2P', cursive;
   background-image: url(imgs/966314.jpg);
-  height: 100vh;
   background-size: cover;
 }
 
