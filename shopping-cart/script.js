@@ -132,6 +132,15 @@ btnSearch.addEventListener('click', async () => {
   searchInput.value = '';
 });
 
+searchInput.addEventListener('keyup', async (e) => {
+  if(e.keyCode === 13) {
+    items.innerHTML = '';
+    const product = searchInput.value.trim();
+    await showProduct(product);
+    searchInput.value = '';
+  }
+});
+
 window.onload = async () => { 
   await showProduct('computador');
   await addShoppingCart();
