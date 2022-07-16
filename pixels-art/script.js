@@ -60,7 +60,7 @@ function removePixel() {
 // Adicionando Pixels ao clicar no botão VQV
 function addPixel(valor) {
   removePixel();
-  pixelBoard.style.gridTemplateColumns = `repeat(${valor}, 1fr)`;
+  pixelBoard.style.gridTemplateColumns = `repeat(${valor}, 30px)`;
   const qtdPixels = valor * valor;
   for (let i = 0; i < qtdPixels; i += 1) {
     const div = document.createElement('div');
@@ -73,8 +73,8 @@ function addPixel(valor) {
 function checkPixel() {
   if (boardSize.value === '') {
     alert('Board inválido!');
-  } else if (boardSize.value > 50) {
-    boardSize.value = 50;
+  } else if (boardSize.value > 20) {
+    boardSize.value = 20;
   } else if (boardSize.value < 5) {
     boardSize.value = 5;
   }
@@ -83,13 +83,11 @@ function checkPixel() {
 
 // Quantidade de Pixels que deve ser inserida
 function pixelQuantity() {
-  const btnGenerate = document.querySelector('#generate-board');
+  const btnGenerate = document.getElementById('generate-board');
   btnGenerate.addEventListener('click', () => {
     const valor = checkPixel();
-    const altura = 30;
-    const width = altura * valor;
-    pixelBoard.style.width = `${width}px`;
     addPixel(valor);
+    boardSize.value = '';
   });
 }
 
@@ -116,7 +114,8 @@ function addColor() {
   pixelBoard.addEventListener('click', (e) => {
     const color = document.querySelectorAll('.color');
     for (let i = 0; i < color.length; i += 1) {
-      if (color[i].classList.contains('selected')) {
+      if (color[i].classList.contains('selected') 
+      && e.target.classList.contains('pixel')) {
         e.target.style.backgroundColor = color[i].style.backgroundColor;
       }
     }
@@ -137,3 +136,12 @@ function clearBtn() {
 }
 
 clearBtn();
+
+
+boardSize.addEventListener('keyup', (e) => {
+  if(e.key === 'Enter') {
+    const valor = boardSize.value.trim();
+    addPixel(valor);
+    boardSize.value = '';
+  }
+});

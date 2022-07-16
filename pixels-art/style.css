@@ -12,7 +12,7 @@ input {
 body {
   color: #f1f1f179;
   font-family: 'Press Start 2P', cursive;
-  background-image: url(imgs/arcade-game-world-pixel-scene/45884.jpg);
+  background-image: url(imgs/966314.jpg);
   background-size: cover;
 }
 
@@ -62,15 +62,15 @@ body {
 
 #pixel-board {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  width: 150px;
-  margin: 0 auto;
+  grid-template-columns: repeat(5, 30px);
+  justify-content: center;
   margin-top: 20px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .pixel {
-  display: flex;
+  /* display: flex; */
+  display: inline-block;
+  margin: 0;
   background-color: white;
   width: 30px;
   height: 30px;
