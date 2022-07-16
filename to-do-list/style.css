@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --bg-color: rgba(187, 187, 187, 0.212);
+  --color-primary: #fff;
+  --color-btn: #000041;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-image: url(imgs/bg-2.svg);
+  background-size: cover;
+  height: 100vh;
+}
+
+button {
+  font-family: 'Courier New', Courier, monospace;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) minmax(300px, 1200px) minmax(100px, 1fr);
+  grid-template-rows: 1fr 25% 25% 25% 1fr;
+  height: 100%;
+  width: 100vw;
+}
+.header {
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+.header{
+  background-color: var(--bg-color);
+  color: var(--color-primary);
+  padding: 10px 0 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#descricao {
+  font-style: italic;
+}
+
+.to-do-container {
+  grid-column: 2/3;
+  grid-row: 2/5;
+  background-color: var(--bg-color);
+  min-height: 100px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-container {
+  color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 15%;
+  font-size: 1.2rem;
+}
+
+.input-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  width: 55%;
+  flex-direction: column;
+  margin-right: 5px;
+}
+
+.btn-container {
+  width: 25%;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+}
+
+.input-content {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+}
+
+.btn-up-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:5px;
+  justify-content: center;
+  width: 30%;
+}
+
+#lista-tarefas {
+  margin-left: 5rem;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+#texto-tarefa {
+  font-family: 'Courier New', Courier, monospace;
+  width: 80%;
+  padding: 10px;
+  border: none;
+  padding-left: 3px;
+  outline: none;
+  font-weight: bold;
+}
+
+#criar-tarefa {
+  background-color: var(--color-primary);
+  color: var(--color-btn);
+  width: 20%;
+  padding: 10px;
+} 
+
+#apaga-tudo, 
+#remover-finalizados, 
+#remover-selecionado,
+#salvar-tarefas  {
+  font-size: 1.2rem;
+  padding: .5rem;
+  flex-grow: 1;
+}
+
+#apaga-tudo {
+  background-color: #d11e1e;
+  color: var(--color-primary);
+}
+
+#remover-finalizados {
+  background-color: #c52ca6;
+  color: var(--color-primary);
+}
+
+#mover-cima, #mover-baixo {
+  background-color: var(--color-primary);
+  color: var(--color-btn);
+  padding: .5rem .8rem;
+}
+
+#remover-selecionado {
+  background-color: #bd8c24;
+  color: var(--color-primary);
+}
+#salvar-tarefas {
+  background-color: #1eb443;
+  color: var(--color-primary);
+}
+
+
+.completed {
+  text-decoration: line-through solid var(--color-primary);
+}
+
+.selected {
+  background-color: var(--color-btn);
+}
+
+.footer {
+  grid-row: 5 / 6;
+  grid-column: 1/4;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--color-primary);
+  padding: 10px 0 10px 20px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+#mover-cima:hover, #mover-baixo:hover {
+  opacity: 0.8;
+}
+
+#apaga-tudo:hover, 
+#remover-finalizados:hover, 
+#remover-selecionado:hover,
+#salvar-tarefas:hover {
+  border: 1px solid var(--color-primary);
+}
