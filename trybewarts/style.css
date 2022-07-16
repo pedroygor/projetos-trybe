@@ -12,9 +12,6 @@ html {
 body {
   height: 100vh;
 }
-/* input, button {
-  border: none;
-} */
 
 main {
   display: flex;
@@ -31,12 +28,14 @@ textarea {
   width: 100%;
 }
 
-input:focus,
-#house:focus,
 #textarea {
   outline: none;
   border: 1px solid rgb(50, 167, 145);
   border-radius: 5px;
+}
+input:focus,
+#house:focus {
+  outline: none;
 }
 
 #evaluation-form {
@@ -60,6 +59,7 @@ input:focus,
 #btn-login {
   background-color: rgb(50, 62, 167);
   color: #fff;
+  cursor: pointer;
 }
 
 #sec-btn-radio {
@@ -106,9 +106,9 @@ input::placeholder,
   /* text-align: center; */
   margin-left: 10px;
   line-height: 2rem;
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
 }
-#form-data p{
+#form-data p {
   text-align: justify;
 }
 
@@ -355,6 +355,7 @@ input::placeholder,
     color: #fff;
     padding: 5px;
   }
+
   .header-title {
     width: 40%;
     display: flex;
@@ -363,9 +364,11 @@ input::placeholder,
     align-items: center;
     gap: 5px;
   }
+
   .trybewarts-header-logo {
     height: 60px;
   }
+
   .trybewarts-login {
     display: flex;
     justify-content: flex-end;
@@ -402,22 +405,27 @@ input::placeholder,
     width: 100%;
     margin-top: 10px;
   }
+
   .image {
     text-align: center;
     width: 40%;
   }
+
   #trybewarts-forms-logo {
     height: 90%;
     margin-top: 5px;
     width: 80%;
   }
+
   #evaluation-form {
     color: rgb(70, 70, 70);
     width: 60%;
   }
+
   #evaluation-form input {
     padding: 4px;
   }
+
   .input-nome,
   .input-email {
     display: flex;
@@ -425,12 +433,15 @@ input::placeholder,
     gap: 5px;
     margin: 0 15%;
   }
+
   #house {
     padding: 5px;
   }
+
   .input-email {
     margin-top: 5px;
   }
+
   .input-family,
   .input-materia,
   .input-rate,
@@ -440,18 +451,25 @@ input::placeholder,
     margin: 0 15%;
     margin-top: 5px;
   }
+
   #div-counter {
     width: 100%;
   }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100;
+  }
+
   .footer {
     text-align: center;
-    width: 100%;
     background-color: rgb(50, 167, 145);
     color: #fff;
     padding: 1rem;
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
   }
+
   #submit-btn {
     background-color: rgb(50, 62, 167);
     color: #fff;
