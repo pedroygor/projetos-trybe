@@ -18,4 +18,4 @@ Nesta jornada solitária, trilho o caminho como um aventureiro solitário, e, po
 
 Este repositório é mais do que um simples depósito de projetos. Ele é a personificação de minha dedicação, paixão e evolução na trilha dos Fundamentos de Programação. Ao explorar meus projetos, espero que você encontre inspiração, conhecimento e até mesmo algum entretenimento. Caso tenha alguma pergunta, sugestão ou queira compartilhar sua própria história, não hesite em entrar em contato. Agradeço por embarcar nesta incrível aventura no meu repositório de projetos de Fundamentos de Programação da Trybe!
 
-Autor: @pedroygor, o aventureiro incansável em busca de dar o próximo passo.
+Autor: [@pedroygor](https://github.com/pedroygor), o aventureiro incansável.
